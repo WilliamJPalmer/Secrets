@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secrets</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
+</head>
+<body>
+  <p class="appTitle">Secrets</p>
+  <div class="mainBkg">
+
+
+  <fieldset id="mainFS">
+
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+<!--  logout button that appears only for the current logged in user-->
+<div class=""style="margin-left:450px;">
+
+
+<% if current_user %>
+  <form action="/sessions/<%=current_user.id%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+    <input class="ghost-button" type="submit" value="Logout" name="Logout">
+
+  </form>
+<% end %>
+</div>
+<%= yield %>
+</div>
+  </fieldset>
+</body>
+</html>

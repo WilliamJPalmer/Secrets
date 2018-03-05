@@ -1,0 +1,23 @@
+<div style="align:center;display:inline-block:font-size:22px;">
+<h1 class="subTitle">Sign Up for Secrets</h1>
+
+
+
+
+<% if flash[:error] %>
+  <%= flash[:error].each do |item| %>
+  <p><%= item %></p>
+  <% end %>
+<% end %>
+<div id="regist">
+<form action="/users/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input style="margin-bottom:10px;" type="text" name="user[name]" value="" placeholder="Name"><br>
+  <input style="margin-bottom:10px;" type="text" name="user[email]" value="" placeholder="Email"><br>
+  <input style="margin-bottom:10px;" type="password" name="user[password]" value="" placeholder="Password"><br>
+  <input style="margin-bottom:10px;" type="password" name="user[password_confirmation]" value="" placeholder="Confirm Password"><br>
+  <input type="submit" name="Signup" value="Signup">
+</form>
+</div>
+<p id="b2login">Back to <a href="/">Login</a></p>
+</div>

@@ -1,0 +1,22 @@
+
+<h3 class="subTitle">Login</h3>
+
+<% if flash[:name] %>
+  <% flash[:name].each do |item| %>
+  <p><%= item %></p>
+  <% end %>
+<% end %>
+<div id="login">
+
+
+<form action="/sessions" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input  style="margin-bottom:10px;" type="text"  id="Email" name="email" placeholder="Email"><br>
+
+  <input  style="margin-bottom:10px;" type="password" id="Password" name="password" placeholder="Password"><br>
+  <input class="ghost-button" type="submit" name="Log In" value="Log In">
+
+</form>
+</div>
+
+<p style="font-size:11px;text-align:right;">Not registered, sign up <a href="/users/new">here</a></p>

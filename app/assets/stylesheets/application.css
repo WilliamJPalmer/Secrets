@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+   background-image: url(/footImg.jpg);
+   margin:0px auto;
+   padding:0px;
+   border:none;
+ }
+ #mainFS{
+   margin:0px auto;
+   margin-top:30px;
+   padding:20px;
+   font-family:sans-serif;
+   width:500px;
+   border:1px solid #666666;
+   background: rgba(225,225,225,0.6);
+   border-radius: 10px;
+ }
+ .ghost-button{
+   display:inline-block;
+   width:75px;
+   height: 20px;
+   padding-bottom: 3px;
+   color: #fff;
+   border: 1px solid #aaa;
+   text-align: center;
+   outline: none;
+   text-decoration: none;
+   margin:10px;
+   background-color: rgba(102,102,102,.4);
+   border-radius: 5px;
+ }
+ .appTitle{
+   font-family: 'Amatica SC', cursive;
+   font-size: 128px;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   padding:0px;
+   margin:0px;
+   text-shadow: 10px 10px 15px white;
+ }
+ .subTitle{
+   font-family: 'Amatica SC', cursive;
+   font-size: 48px;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   padding:0px;
+   margin:0px;
+   text-shadow: 10px 10px 15px white;
+ }
+ .userWelcome{
+   font-family: 'Amatica SC', cursive;
+   font-size: 48px;
+   font-weight: bold;
+   color: #666;
+   text-align: center;
+   padding:0px;
+   margin:0px;
+   text-shadow: 10px 10px 15px white;
+ }

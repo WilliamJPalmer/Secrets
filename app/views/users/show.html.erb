@@ -1,0 +1,41 @@
+<div id="userShow">
+
+<a href="/secrets/">All Secrets</a>
+
+<p id="welcomeUsr">Welcome <span class="userWelcome"> <%=current_user.name%></span></p>
+
+
+
+<form  action="/secrets/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <p id="addSec">Add a Secret</p>
+  <textarea id="secretInput" name="secret" rows="4" cols="80"></textarea><br>
+  <div class="addBtnDiv">
+  <input id="addSecBtn" type="submit" name="Add Secret" value="Add Secret">
+  </div>
+</form>
+<hr>
+<p id="urSec">Your Secrets</p>
+
+<% current_user.secrets.reverse.each do |item| %>
+  <p id="mySec"><%= item.secret %><span id="like"> <%= item.likes.count %> Likes       Added on <%= item.created_at.strftime("%B #{item.created_at.day.ordinalize}, %Y") %></span>
+    <form action="/secrets/<%=item.id%>" method="post" style="display:inline-blcok;">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <input type="hidden" name="_method" value="delete">
+      <input class="ghost-button" type="submit" name="Delete" value="Delete">
+
+    </form></p>
+
+  <!-- <p id="like"><%=item.likes.count%> Likes</p> -->
+<% end %>
+<hr>
+<p id="secLiked">Secrets You Liked</p>
+
+  <% current_user.liked_secrets.each do |item| %>
+
+    <p id="sl1"><%= item.secret %> <span id="like"> <%= item.likes.count %> Likes</span></p>
+    <hr class="likedHR">
+  <% end %>
+
+
+</div>

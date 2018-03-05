@@ -1,0 +1,120 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#userShow{
+  padding:20px;
+  background: rgba(171,211,229,.5);
+  box-shadow: 3px 3px 10px #666666;
+  border:1px solid #888888;
+  border-radius: 7px;
+}
+#addSecBtn{
+  // margin-left:188px;
+  text-align: center;
+  display:inline-block;
+  width:100px;
+  height: 35px;
+  padding: 4px;
+  color: #fff;
+  border: 1px solid #eeeeee;
+  outline: none;
+  text-decoration: none;
+
+  // margin:10px;
+  background-color: rgba(32, 81, 98, 0.5);
+}
+.addBtnDiv{
+  text-align: center;
+}
+.appTitle{
+  font-family: 'Amatica SC', cursive;
+  font-size: 128px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding:0px;
+  margin:0px;
+  text-shadow: 10px 10px 15px white;
+}
+#secretInput{
+  resize:none;
+}
+#like{
+  font-size:12px;
+  font-style:italic;
+}
+#sl1{
+  margin-left:15px;
+  font-size: 14px;
+}
+#sl2{
+  margin-left:25px;
+  font-style:italic;
+  font-size:12px;
+  color:#999999;
+}
+#regist{
+  padding:20px;
+  text-align:center;
+  background: rgba(171,211,229,.8);
+  box-shadow: 3px 3px 10px #666666;
+  border:1px solid #777777;
+  border-radius: 7px;
+}
+#b2login{
+  font-size:11px;
+  text-align:right;
+}
+#welcometxt{
+  color:white;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+#loginTxt{
+  font-weight: lighter;
+  text-align: center;
+
+}
+#welcomeUsr{
+  color:#666;
+  text-align: center;
+  font-weight: normal;
+  font-size: 24px;
+  margin:5px;
+}
+a{
+  font-size: 11px;
+}
+#mySec{
+  font-size: 14px;
+  color:#333333;
+  font-weight: bold;
+}
+#urSec{
+  font-size: 16px;
+  font-weight:bold;
+  color:#666666;
+}
+#secLiked{
+  font-size: 16px;
+  font-weight: bold;
+  color:#666666;
+}
+
+#like{
+  color:#999999;
+  font-style: oblique;
+  font-size: 12px;
+  margin-left:10px;
+}
+#addSec{
+  font-size: 16px;
+  font-weight:bold;
+  margin-bottom: 5px;
+  color: #333333;
+}
+.likedHR{
+  width:50%;
+  vertical-align: middle;
+}
