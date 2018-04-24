@@ -43,6 +43,9 @@
    margin:10px;
    background-color: rgba(102,102,102,.4);
    border-radius: 5px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
  }
  .appTitle{
    font-family: 'Amatica SC', cursive;
